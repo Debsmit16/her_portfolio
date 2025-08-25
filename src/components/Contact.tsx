@@ -106,7 +106,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-dark">
+    <section id="contact" className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-dark px-4 sm:px-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial="hidden"
@@ -229,7 +229,7 @@ export function Contact() {
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-dark dark:text-white mb-2">
                         Your Name

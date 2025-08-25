@@ -22,34 +22,34 @@ export function Hero() {
   if (!mounted) return null
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-bg to-red-bg dark:from-gray-900 dark:to-gray-800">
-      {/* Background Elements */}
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-bg to-red-bg dark:from-gray-900 dark:to-gray-800 px-4 sm:px-6">
+      {/* Background Elements - Made responsive */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-primary-blue rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
-        <div className="absolute top-40 right-20 w-72 h-72 bg-primary-red rounded-full mix-blend-multiply filter blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-blue-accent rounded-full mix-blend-multiply filter blur-xl animate-float" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-10 sm:top-20 left-4 sm:left-20 w-32 h-32 sm:w-48 sm:h-48 lg:w-72 lg:h-72 bg-primary-blue rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
+        <div className="absolute top-20 sm:top-40 right-4 sm:right-20 w-32 h-32 sm:w-48 sm:h-48 lg:w-72 lg:h-72 bg-primary-red rounded-full mix-blend-multiply filter blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute -bottom-8 left-1/2 w-32 h-32 sm:w-48 sm:h-48 lg:w-72 lg:h-72 bg-blue-accent rounded-full mix-blend-multiply filter blur-xl animate-float" style={{ animationDelay: '4s' }}></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Left Column - Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center lg:text-left"
+            className="text-center lg:text-left order-2 lg:order-1"
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mb-6"
+              className="mb-4 sm:mb-6"
             >
-              <h1 className="text-5xl md:text-7xl font-bold font-display mb-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold font-display mb-2 sm:mb-4 leading-tight">
                 <span className="text-dark dark:text-white">Hi, I'm </span>
-                <span className="text-gradient">Srimoyee</span>
+                <span className="text-gradient block sm:inline">Srimoyee</span>
               </h1>
-              <div className="text-2xl md:text-3xl font-medium text-gray-600 dark:text-gray-300 mb-6">
+              <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 min-h-[3rem] sm:min-h-[4rem]">
                 <TypeWriter 
                   words={[
                     'Computer Science Student',
@@ -69,7 +69,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl"
+              className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0"
             >
               3rd Year CSE student at Techno International Newtown, passionate about creating 
               beautiful digital experiences through code, capturing moments through photography, 
@@ -80,10 +80,10 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
             >
-              <button className="btn-primary group">
-                <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
+              <button className="btn-primary group text-sm sm:text-base py-2 px-4 sm:py-3 sm:px-6">
+                <Download className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:animate-bounce" />
                 Download Resume
               </button>
               <button 
@@ -93,9 +93,9 @@ export function Hero() {
                     contactSection.scrollIntoView({ behavior: 'smooth' })
                   }
                 }}
-                className="btn-secondary group"
+                className="btn-secondary group text-sm sm:text-base py-2 px-4 sm:py-3 sm:px-6"
               >
-                <Mail className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Contact Me
               </button>
             </motion.div>
@@ -106,41 +106,41 @@ export function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex justify-center lg:justify-end"
+            className="flex justify-center lg:justify-end order-1 lg:order-2"
           >
             <div className="relative">
-              <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-glow bg-gradient-to-br from-primary-blue to-primary-red p-1">
+              <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-glow bg-gradient-to-br from-primary-blue to-primary-red p-1">
                 <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-gray-800 flex items-center justify-center">
                   {/* Placeholder for profile image */}
                   <div className="w-full h-full bg-gradient-to-br from-blue-accent to-red-accent rounded-full flex items-center justify-center">
-                    <span className="text-white text-6xl font-bold">SP</span>
+                    <span className="text-white text-4xl sm:text-5xl lg:text-6xl font-bold">SP</span>
                   </div>
                 </div>
               </div>
               
-              {/* Floating elements around the profile */}
+              {/* Floating elements around the profile - Made responsive */}
               <motion.div
                 animate={{ y: [-10, 10, -10] }}
                 transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -top-4 -right-4 w-16 h-16 bg-primary-blue rounded-xl shadow-lg flex items-center justify-center"
+                className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-12 h-12 sm:w-16 sm:h-16 bg-primary-blue rounded-xl shadow-lg flex items-center justify-center"
               >
-                <span className="text-white text-2xl">💻</span>
+                <span className="text-white text-lg sm:text-2xl">💻</span>
               </motion.div>
               
               <motion.div
                 animate={{ y: [10, -10, 10] }}
                 transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-                className="absolute -bottom-4 -left-4 w-16 h-16 bg-primary-red rounded-xl shadow-lg flex items-center justify-center"
+                className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 w-12 h-12 sm:w-16 sm:h-16 bg-primary-red rounded-xl shadow-lg flex items-center justify-center"
               >
-                <span className="text-white text-2xl">📸</span>
+                <span className="text-white text-lg sm:text-2xl">📸</span>
               </motion.div>
               
               <motion.div
                 animate={{ y: [-5, 15, -5] }}
                 transition={{ duration: 3, repeat: Infinity, delay: 2 }}
-                className="absolute top-1/2 -right-6 w-12 h-12 bg-blue-accent rounded-lg shadow-lg flex items-center justify-center"
+                className="absolute top-1/2 -right-3 sm:-right-6 w-10 h-10 sm:w-12 sm:h-12 bg-blue-accent rounded-lg shadow-lg flex items-center justify-center"
               >
-                <span className="text-white text-xl">💃</span>
+                <span className="text-white text-base sm:text-xl">💃</span>
               </motion.div>
             </div>
           </motion.div>
@@ -151,15 +151,15 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2"
         >
           <button
             onClick={scrollToAbout}
             className="flex flex-col items-center text-gray-600 dark:text-gray-300 hover:text-primary-blue dark:hover:text-blue-accent transition-colors duration-200 group"
             aria-label="Scroll to about section"
           >
-            <span className="text-sm mb-2">Scroll Down</span>
-            <ArrowDown className="w-6 h-6 animate-bounce group-hover:text-primary-blue" />
+            <span className="text-xs sm:text-sm mb-1 sm:mb-2">Scroll Down</span>
+            <ArrowDown className="w-5 h-5 sm:w-6 sm:h-6 animate-bounce group-hover:text-primary-blue" />
           </button>
         </motion.div>
       </div>

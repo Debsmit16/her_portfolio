@@ -24,6 +24,24 @@ export const metadata: Metadata = {
   authors: [{ name: 'Srimoyee Pal' }],
   creator: 'Srimoyee Pal',
   publisher: 'Srimoyee Pal',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/icons/icon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icons/icon-16x16.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/icons/icon-152x152.png', sizes: '152x152', type: 'image/png' },
+      { url: '/icons/icon-192x192.png', sizes: '192x192', type: 'image/png' },
+    ],
+    other: [
+      {
+        rel: 'mask-icon',
+        url: '/favicon.svg',
+        color: '#1e40af',
+      },
+    ],
+  },
   openGraph: {
     title: 'Srimoyee Pal - Portfolio',
     description: 'Professional portfolio of Srimoyee Pal - CSE Student, Photographer, Dancer, and Developer',

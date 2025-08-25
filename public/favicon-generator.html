@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Favicon Generator</title>
+</head>
+<body>
+    <canvas id="canvas" width="32" height="32" style="border: 1px solid #ccc; transform: scale(10);"></canvas>
+    
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Create gradient background
+        const gradient = ctx.createLinearGradient(0, 0, 32, 32);
+        gradient.addColorStop(0, '#1e40af');
+        gradient.addColorStop(1, '#dc2626');
+        
+        // Fill background
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, 32, 32);
+        
+        // Draw S letter
+        ctx.fillStyle = '#ffffff';
+        ctx.font = 'bold 24px Arial';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('S', 16, 16);
+        
+        // Convert to data URL for download
+        const link = document.createElement('a');
+        link.download = 'favicon.ico';
+        link.href = canvas.toDataURL();
+        document.body.appendChild(link);
+        console.log('Canvas ready - right click to save as favicon.ico');
+    </script>
+</body>
+</html>

@@ -103,7 +103,7 @@ export function Projects() {
   }
 
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-dark">
+    <section id="projects" className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-dark px-4 sm:px-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial="hidden"
@@ -150,7 +150,7 @@ export function Projects() {
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8"
         >
           {filteredProjects.map((project) => (
             <motion.div
