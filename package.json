@@ -1,0 +1,33 @@
+{
+  "name": "srimoyee-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/third-parties": "^15.5.0",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.541.0",
+    "next": "^15.5.0",
+    "next-pwa": "^5.6.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.11",
+    "@types/react-dom": "^19.1.7",
+    "@typescript-eslint/eslint-plugin": "^8.41.0",
+    "@typescript-eslint/parser": "^8.41.0",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^9.34.0",
+    "eslint-config-next": "^15.5.0",
+    "postcss": "^8.4.40",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.5.4"
+  }
+}

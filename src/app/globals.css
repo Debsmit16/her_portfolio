@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Custom CSS Variables */
+:root {
+  /* Blue Shades */
+  --primary-blue: #1e40af;
+  --light-blue: #3b82f6;
+  --blue-accent: #60a5fa;
+  --blue-bg: #eff6ff;
+  
+  /* Red Shades */
+  --primary-red: #dc2626;
+  --light-red: #ef4444;
+  --red-accent: #f87171;
+  --red-bg: #fef2f2;
+  
+  /* Neutrals */
+  --dark: #0f172a;
+  --gray: #64748b;
+  --light-gray: #f1f5f9;
+  --white: #ffffff;
+}
+
+/* Dark mode variables */
+.dark {
+  --primary-blue: #60a5fa;
+  --light-blue: #93c5fd;
+  --blue-accent: #dbeafe;
+  --blue-bg: #1e3a8a;
+  
+  --primary-red: #f87171;
+  --light-red: #fca5a5;
+  --red-accent: #fecaca;
+  --red-bg: #991b1b;
+  
+  --dark: #f8fafc;
+  --gray: #cbd5e1;
+  --light-gray: #334155;
+  --white: #0f172a;
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+  background-color: var(--white);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--light-blue);
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .bg-gradient {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
+  }
+  
+  .bg-gradient-light {
+    background: linear-gradient(135deg, var(--blue-bg), var(--red-bg));
+  }
+  
+  .shadow-glow {
+    box-shadow: 0 0 30px rgba(30, 64, 175, 0.3);
+  }
+  
+  .shadow-glow-red {
+    box-shadow: 0 0 30px rgba(220, 38, 38, 0.3);
+  }
+}
+
+/* Component styles */
+@layer components {
+  .btn-primary {
+    @apply bg-primary-blue hover:bg-light-blue text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-glow;
+  }
+  
+  .btn-secondary {
+    @apply bg-primary-red hover:bg-light-red text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-glow-red;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white font-medium py-3 px-6 rounded-lg transition-all duration-300;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6;
+  }
+  
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold text-center mb-12 text-gradient font-display;
+  }
+  
+  .section-subtitle {
+    @apply text-xl text-slate-600 dark:text-slate-300 text-center mb-8 max-w-2xl mx-auto;
+  }
+}
